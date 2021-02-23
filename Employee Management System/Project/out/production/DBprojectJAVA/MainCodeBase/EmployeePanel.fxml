@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainCodeBase.EmployeePanelController">
+    <children>
+        <ImageView fitHeight="602.0" fitWidth="765.0" layoutX="185.0" pickOnBounds="true">
+            <image>
+                <Image url="@../image/loginBGsmall.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="edit_dtls_btn" layoutX="19.0" layoutY="327.0" mnemonicParsing="false" onAction="#editPersonalBtCode" prefHeight="25.0" prefWidth="139.0" text="Edit Details" />
+        <Button fx:id="gnt_pay_btn" layoutX="21.0" layoutY="451.0" mnemonicParsing="false" onAction="#GeneratePayslip" prefHeight="25.0" prefWidth="139.0" text="Generate Payslip" />
+        <Button fx:id="chk_dept_info_btn" layoutX="21.0" layoutY="411.0" mnemonicParsing="false" onAction="#viewEmpDptDeets" prefHeight="25.0" prefWidth="139.0" text="Check Department Info" />
+        <Button fx:id="loan_info_btn" layoutX="19.0" layoutY="370.0" mnemonicParsing="false" onAction="#viewLoanBtn" prefHeight="25.0" prefWidth="139.0" text="Loan Info" />
+        <Button fx:id="logoutBt" layoutX="63.0" layoutY="518.0" mnemonicParsing="false" onAction="#setLogoutBt" text="Logout" />
+        <Text fx:id="id_txt" blendMode="COLOR_DODGE" layoutX="315.0" layoutY="337.0" mouseTransparent="true" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <font>
+                <Font name="BebasNeue" size="36.0" />
+            </font>
+         <fill>
+            <LinearGradient endX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#abc3ff" />
+                  <Stop color="#87c7c2" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+        </Text>
+        <ImageView fitHeight="140.0" fitWidth="145.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../image/employee.png" />
+            </image>
+            <effect>
+                <Shadow blurType="ONE_PASS_BOX" color="WHITE" />
+            </effect>
+        </ImageView>
+        <Button fx:id="prsn_info_btn" layoutX="21.0" layoutY="245.0" mnemonicParsing="false" onAction="#viewInfoBtn" prefHeight="25.0" prefWidth="139.0" text="Personal Info" />
+        <Button fx:id="prsn_logindet_btn" layoutX="21.0" layoutY="288.0" mnemonicParsing="false" onAction="#loginDetailBt" prefHeight="25.0" prefWidth="139.0" text="Update Login Info" />
+        <Text fx:id="time" layoutX="746.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE: 20/01/2021">
+            <font>
+                <Font name="BebasNeue" size="29.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="0.03816793893129769" startX="1.0" startY="1.0">
+                    <stops>
+                        <Stop color="#b5d1e5" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+        <Text fill="#fffcfc" layoutX="315.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, employee">
+            <font>
+                <Font name="BebasNeue" size="81.0" />
+            </font>
+         <stroke>
+            <LinearGradient endX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="#abc3ff" />
+                  <Stop color="#579c97" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+        </Text>
+    </children>
+</AnchorPane>

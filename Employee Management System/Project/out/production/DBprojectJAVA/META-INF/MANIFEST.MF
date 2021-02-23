@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Main-Class: MainCodeBase.FakeMain
+Class-Path: activation-1.1.1.jar slf4j-simple-1.7.30.jar java-mail-1.4.4
+ .jar slf4j-api-1.7.30.jar mysql-connector-java-8.0.22.jar src.zip javaf
+ x-swt.jar javafx.web.jar javafx.base.jar javafx.fxml.jar javafx.media.j
+ ar javafx.swing.jar javafx.controls.jar javafx.graphics.jar ecj-4.3.1.j
+ ar core-2.3.0.jar icu4j-57.1.jar stax-1.2.0.jar javax.inject-1.jar jcom
+ mon-1.0.23.jar stax-api-1.0-2.jar stax-api-1.0.1.jar aopalliance-1.0.ja
+ r itext-2.1.7.js5.jar bcmail-jdk14-138.jar bcprov-jdk14-138.jar bctsp-j
+ dk14-1.38.jar castor-xml-1.3.3.jar commons-lang-2.6.jar bcmail-jdk14-1.
+ 38.jar bcprov-jdk14-1.38.jar castor-core-1.3.3.jar jfreechart-1.0.19.ja
+ r lucene-core-4.5.1.jar jackson-core-2.1.4.jar jakarta-regexp-1.4.jar j
+ asperreports-6.3.0.jar commons-digester-2.1.jar lucene-queries-4.5.1.ja
+ r lucene-sandbox-4.5.1.jar commons-logging-1.1.1.jar olap4j-0.9.7.309-J
+ S-3.jar jackson-databind-2.1.4.jar commons-beanutils-1.9.0.jar lucene-q
+ ueryparser-4.5.1.jar spring-aop-3.0.6.RELEASE.jar spring-asm-3.0.6.RELE
+ ASE.jar commons-collections-3.2.2.jar jackson-annotations-2.1.4.jar spr
+ ing-core-3.0.6.RELEASE.jar spring-beans-3.0.6.RELEASE.jar spring-contex
+ t-3.0.6.RELEASE.jar lucene-analyzers-common-4.5.1.jar spring-expression
+ -3.0.6.RELEASE.jar log4j-1.2.17.jar
+

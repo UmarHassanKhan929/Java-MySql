@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainCodeBase.EmployeePanelController">
+   <children>
+      <ImageView fitHeight="602.0" fitWidth="777.0" layoutX="173.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/loginBGsmall.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="19.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Edit Details" />
+      <Button layoutX="21.0" layoutY="451.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Generate Payslip" />
+      <Button layoutX="16.0" layoutY="411.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" text="Check Department Info" />
+      <Button layoutX="19.0" layoutY="370.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Loan Info" />
+      <Text layoutX="420.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Slave">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Text>
+      <Button fx:id="logoutBt" layoutX="63.0" layoutY="518.0" mnemonicParsing="false" onAction="#setLogoutBt" text="Logout" />
+      <MenuBar prefHeight="25.0" prefWidth="950.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fitHeight="139.0" fitWidth="153.0" layoutX="9.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/employee.png" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="642.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainCodeBase.ShowEmployeesController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="603.0" prefWidth="995.0" style="-fx-background-color: #383838;">
+         <children>
+            <Button fx:id="adminBt" layoutX="505.0" layoutY="16.0" mnemonicParsing="false" onAction="#showAllAdmin" prefHeight="36.0" prefWidth="136.0" text="View Only Admins" />
+            <Button fx:id="retBt" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnFunc" prefHeight="36.0" prefWidth="69.0" text="Return" />
+            <Button fx:id="mgrBt" layoutX="824.0" layoutY="14.0" mnemonicParsing="false" onAction="#showAllManager" prefHeight="36.0" prefWidth="136.0" text="View Only Managers" />
+            <Button fx:id="empBt" layoutX="663.0" layoutY="14.0" mnemonicParsing="false" onAction="#showOnlyEmployee" prefHeight="36.0" prefWidth="136.0" text="View Only Employees" />
+            <Button fx:id="allEmpBt" layoutX="348.0" layoutY="16.0" mnemonicParsing="false" onAction="#showAllEmployee" prefHeight="36.0" prefWidth="136.0" text="View All Employees" />
+            <Button fx:id="gnt_emp_list_btn" layoutX="139.0" layoutY="16.0" mnemonicParsing="false" onAction="#GenerateEmpList" prefHeight="36.0" prefWidth="178.0" text="Generate Employees List">
+               <font>
+                  <Font name="Bodoni MT Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="578.0" fitWidth="993.0" layoutY="65.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/loginBGsmall.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="view" layoutX="270.0" layoutY="86.0" onMouseClicked="#getSelected" prefHeight="529.0" prefWidth="694.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="col_ssn" prefWidth="75.0" text="SSN" />
+            <TableColumn fx:id="col_name" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="col_addr" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="col_email" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="col_ph" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="col_db" prefWidth="75.0" text="Date Of Birth" />
+            <TableColumn fx:id="col_join" prefWidth="75.0" text="Join Date" />
+            <TableColumn fx:id="col_age" prefWidth="75.0" text="Age" />
+            <TableColumn fx:id="col_mgrID" prefWidth="75.0" text="Manager ID" />
+            <TableColumn fx:id="col_gradeID" prefWidth="75.0" text="Grade ID" />
+            <TableColumn fx:id="col_deptID" prefWidth="75.0" text="Department ID" />
+        </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="14.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <TextField fx:id="idTxt" layoutX="115.0" layoutY="86.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN" />
+      <TextField fx:id="ssnTxt" layoutX="115.0" layoutY="123.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <TextField fx:id="nameTxt" layoutX="115.0" layoutY="160.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+      <TextField fx:id="addressTxt" layoutX="115.0" layoutY="197.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <TextField fx:id="emailTxt" layoutX="115.0" layoutY="234.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" />
+      <TextField fx:id="phoneTxt" layoutX="115.0" layoutY="268.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Of Birth" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Joining Date" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age" />
+      <TextField fx:id="ageTxt" layoutX="115.0" layoutY="370.0" />
+      <Text fill="WHITE" layoutX="15.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager ID" />
+      <TextField fx:id="mgrIDTxt" editable="false" layoutX="115.0" layoutY="406.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade ID" />
+      <TextField fx:id="gradeIdTxt" layoutX="115.0" layoutY="440.0" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department ID" />
+      <Text fill="RED" layoutX="103.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <TextField fx:id="deptIdTxt" layoutX="115.0" layoutY="474.0" />
+      <Text fill="RED" layoutX="103.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="103.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Button fx:id="updateEmpBt" layoutX="15.0" layoutY="556.0" mnemonicParsing="false" onAction="#updateEmp" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #F8D229;" text="Update" />
+      <Button fx:id="addEmpBt" layoutX="15.0" layoutY="513.0" mnemonicParsing="false" onAction="#addEmp" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #2CEA4F;" text="Add Employee" />
+      <Button fx:id="delEmpBt" layoutX="16.0" layoutY="597.0" mnemonicParsing="false" onAction="#deleteEmp" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #DE2215;" text="Delete" />
+      <ComboBox fx:id="login_priv_cbx" layoutX="115.0" layoutY="519.0" prefHeight="26.0" prefWidth="149.0" promptText="Login Privilege" />
+      <DatePicker fx:id="JD_CLNDR" layoutX="117.0" layoutY="338.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Date" />
+      <DatePicker fx:id="DOB_CLNDR" layoutX="117.0" layoutY="305.0" prefHeight="25.0" prefWidth="149.0" promptText="Select Date" />
+      <ComboBox fx:id="deptBox" layoutX="116.0" layoutY="406.0" onAction="#setManagerTxt" prefWidth="150.0" promptText="Select Department" />
+      <ComboBox fx:id="gradeBox" layoutX="116.0" layoutY="440.0" prefWidth="150.0" promptText="Select Grade Scale" />
+      <ComboBox fx:id="mgrBox" layoutX="115.0" layoutY="473.0" prefWidth="150.0" promptText="Select Manager" />
+   </children>
+</AnchorPane>

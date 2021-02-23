@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainCodeBase.GradeScaleController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="603.0" prefWidth="709.0" style="-fx-background-color: #383838;">
+         <children>
+            <Button fx:id="retBt" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#retBtFunc" prefHeight="36.0" prefWidth="69.0" text="Return" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="537.0" fitWidth="721.0" layoutX="-13.0" layoutY="66.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/loginBGsmall.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="30.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GradeScale ID" />
+      <TextField fx:id="gIDTxt" layoutX="123.0" layoutY="382.0" prefHeight="26.0" prefWidth="30.0" promptText="ID" />
+      <Text fill="RED" layoutX="108.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Button fx:id="updateDeptBt" layoutX="299.0" layoutY="545.0" mnemonicParsing="false" onAction="#updateGradeSQL" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #F8D229;" text="Update" />
+      <Button fx:id="addGradeBt" layoutX="161.0" layoutY="545.0" mnemonicParsing="false" onAction="#addGrade" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #2CEA4F;" text="New Grade Scale" />
+      <Button fx:id="delGradeBt" layoutX="442.0" layoutY="545.0" mnemonicParsing="false" onAction="#delGrade" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: #DE2215;" text="Delete" />
+      <Text fill="WHITE" layoutX="38.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grade Scale " />
+      <TextField fx:id="gNameTxt" layoutX="122.0" layoutY="420.0" prefHeight="26.0" prefWidth="150.0" promptText="Title" />
+      <Text fill="RED" layoutX="108.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <TableView fx:id="gradeTable" layoutX="38.0" layoutY="94.0" onMouseClicked="#getSelection" prefHeight="262.0" prefWidth="622.0">
+         <columns>
+            <TableColumn fx:id="tableId" prefWidth="43.199981689453125" text="ID" />
+            <TableColumn fx:id="tableGrade" prefWidth="161.60001373291016" text="Grade Scale" />
+            <TableColumn fx:id="tableDID" prefWidth="75.0" text="Dept ID" />
+            <TableColumn fx:id="tableBase" prefWidth="56.79998779296875" text="Base Pay" />
+            <TableColumn fx:id="tableTravel" prefWidth="93.60000610351562" text="Travel Allowance" />
+            <TableColumn fx:id="tableMedic" prefWidth="96.0" text="Medical Allowance" />
+            <TableColumn fx:id="TableHouse" prefWidth="85.5999755859375" text="House Rent Allowance" />
+         </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="55.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dept ID" />
+      <TextField fx:id="dIDTxt" editable="false" layoutX="122.0" layoutY="456.0" prefHeight="26.0" prefWidth="30.0" promptText="ID" />
+      <Text fill="RED" layoutX="108.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="WHITE" layoutX="439.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Base Pay" />
+      <TextField fx:id="baseTxt" layoutX="512.0" layoutY="492.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text fill="RED" layoutX="498.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="WHITE" layoutX="395.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Travel Allowance" />
+      <TextField fx:id="travelTxt" layoutX="513.0" layoutY="382.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text fill="RED" layoutX="499.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="WHITE" layoutX="385.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medical Allowance" />
+      <TextField fx:id="medicalTxt" layoutX="513.0" layoutY="420.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text fill="RED" layoutX="499.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="WHITE" layoutX="365.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="House Rent Allowance" />
+      <TextField fx:id="houseTxt" layoutX="512.0" layoutY="456.0" prefHeight="26.0" prefWidth="122.0" />
+      <Text fill="RED" layoutX="498.0" layoutY="474.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <ImageView fitHeight="54.0" fitWidth="82.0" layoutX="619.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/employee.png" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <ComboBox fx:id="deptBox" layoutX="122.0" layoutY="492.0" onAction="#setDeptID" prefWidth="150.0" promptText="Select Department" />
+      <Text fill="WHITE" layoutX="6.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department Name" />
+      <Text fill="RED" layoutX="110.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+   </children>
+</AnchorPane>

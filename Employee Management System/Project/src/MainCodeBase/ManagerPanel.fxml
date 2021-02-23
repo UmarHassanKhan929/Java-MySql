@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainCodeBase.ManagerPanelController">
+    <children>
+        <ImageView fitHeight="602.0" fitWidth="771.0" layoutX="179.0" pickOnBounds="true">
+            <image>
+                <Image url="@../image/loginBGsmall.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="edit_prsnl_info" layoutX="20.0" layoutY="289.0" mnemonicParsing="false" onAction="#EditPersonalInfo" prefHeight="25.0" prefWidth="139.0" text="Edit Personal Details" />
+        <Button fx:id="gnrt_ps_btn" layoutX="21.0" layoutY="451.0" mnemonicParsing="false" onAction="#GeneratePayslip" prefHeight="25.0" prefWidth="139.0" text="Generate Payslip" />
+        <Button fx:id="chk_dept_btn" layoutX="20.0" layoutY="330.0" mnemonicParsing="false" onAction="#CheckDepartmentInfo" prefHeight="25.0" prefWidth="139.0" text="Check Department Info" />
+        <Button fx:id="loan_btn" layoutX="21.0" layoutY="411.0" mnemonicParsing="false" onAction="#RequestLoan" prefHeight="25.0" prefWidth="139.0" text="Loan Info" />
+        <Text fill="WHITE" layoutX="250.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Manager">
+            <font>
+                <Font name="BebasNeue" size="96.0" />
+            </font>
+        </Text>
+        <Button fx:id="logoutBt" layoutX="63.0" layoutY="518.0" mnemonicParsing="false" onAction="#setLogoutBt" text="Logout" />
+        <Text fx:id="time" layoutX="746.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATE: 20/01/2021">
+            <font>
+                <Font name="BebasNeue" size="29.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="0.03816793893129769" startX="1.0" startY="1.0">
+                    <stops>
+                        <Stop color="#b5d1e5" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+      <ImageView fitHeight="134.0" fitWidth="164.0" layoutX="7.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/employee.png" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Button fx:id="mng_emp_btn" layoutX="21.0" layoutY="371.0" mnemonicParsing="false" onAction="#ManageEmployeesInDept" prefHeight="25.0" prefWidth="139.0" text="Manage Employees" />
+    </children>
+</AnchorPane>
